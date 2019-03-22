@@ -15,4 +15,14 @@ Pod::Spec.new do |s|
     s.source_files = 'Classes/*.{h,m}', 'Classes/**/*.{h,m}'
 
     s.frameworks = 'Security'
+
+    s.subspec 'bitcoin' do |ss|
+        ss.source_files = 'Classes/bitcoin/src/*.{h,cpp}', 'Classes/bitcoin/src/**/*.{h,cpp}'
+        ss.private_header_files = 'Classes/bitcoin/src/*.h', 'Classes/bitcoin/src/**/*.h'
+    end
+
+#    s.subspec 'extends' do |ss|
+#        ss.source_files = 'Classes/extends/*.{h,m,mm}'
+#        ss.public_header_files = 'Classes/extends/*.h'
+#    end
 end
